@@ -1,0 +1,29 @@
+Create DataBase ent_gest;
+USE ent_gest;
+
+Create table transaction
+(
+id int not null AUTO_INCREMENT,
+idcompte int not null,
+valeur float not null,
+modeTransaction int not null,
+date date default null,
+activite varchar(150) default null,
+CONSTRAINT pk_compte PRIMARY KEY(id),
+FOREIGN KEY (idcompte) REFERENCES compte(id)
+);
+
+
+Create table compte
+(
+id int not null AUTO_INCREMENT,
+libelle varchar(100) not null,
+valeur float not null,
+CONSTRAINT pk_compte PRIMARY KEY(id)
+);
+
+Insert into compte(libelle,valeur)
+VALUES("Compte Bancaire",50);
+
+Insert into compte(libelle,valeur)
+VALUES("Compte Crypto",150);
