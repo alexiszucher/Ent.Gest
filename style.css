@@ -1,0 +1,12 @@
+#navbar{
+	position: absolute;
+	z-index: 9;
+}
+.container{
+	width: 90%;
+}
+.nav-color{
+	filter:alpha(opacity=50);
+	background-color: #FFA500;
+	opacity: 0.9;
+}
