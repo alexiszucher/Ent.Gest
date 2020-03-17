@@ -16,12 +16,13 @@
 <body>
 
 
-  <nav class="nav-extended">
+  <nav class="nav-extended pink darken-1">
     <div class="nav-wrapper">
-      <a href="index.php" class="brand-logo">Ent.Gest</a>
+      <a href="index.php" style="margin-left: 10%;margin-top: 2%;" class="brand-logo">Ent.Gest </a>
+      <img src="img/logo2.png" style="margin-top: 20px; margin-left:40%; height:100px; width:100px;"></img>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="planification.php">Planification de comptes</a></li>
+        <li> <a style="margin-top:7%; width:600px;" href="planification.php" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Gestion des comptes</a>
       </ul>
     </div>
   </nav>

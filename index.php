@@ -1,8 +1,6 @@
 
 <?php include_once("header.php"); ?>
 
-<img src="img/logo.png" style="margin-top:10%;margin-left:40%;height:200px; width:300px;"></img>
-
 <?php
 
   $requete = "SELECT * FROM tache";
@@ -16,10 +14,19 @@
 
   if($isresult == 0)
   {
-    echo "RIEN";
+     echo '<div class="row">
+    <div class="col s12 m12">
+      <div class="card-panel teal">
+        <H5 align="center"><span align="center" class="white-text">Il n\'y a pas de tâche en attente pour le moment.</H5>
+        </span>
+      </div>
+    </div>
+  </div>';
   }
 
 ?>
+
+<div align="center"><a href="ajoutTache.php" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></div>
         
 <!------------------------------------------------------------------------------------------------------>
 
