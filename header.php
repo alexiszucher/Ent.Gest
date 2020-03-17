@@ -21,8 +21,7 @@
       <a href="index.php" class="brand-logo">Ent.Gest</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="gestion-compte.php">Gestion de compte</a></li>
-        <li><a href="planification.php">Planification</a></li>
+        <li><a href="planification.php">Planification de comptes</a></li>
       </ul>
     </div>
   </nav>
