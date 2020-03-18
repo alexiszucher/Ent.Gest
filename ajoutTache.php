@@ -28,9 +28,11 @@
 
 	if(isset($_POST["libelle"]))
 	{
-		$requete = $bdd->prepare("Insert into tache(libelle,minute) VALUES(:libelle,:minute)");
+    $date = date("Y-m-d");
+		$requete = $bdd->prepare("Insert into tache(libelle,minute,date) VALUES(:libelle,:minute,:date)");
 		$requete->bindParam(":libelle",$_POST["libelle"]);
 		$requete->bindParam(":minute",$_POST["temps"]);
+    $requete->bindParam(":date",$date);
 
 		if($requete->execute())
 		{
