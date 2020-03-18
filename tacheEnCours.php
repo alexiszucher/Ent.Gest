@@ -10,7 +10,7 @@
 
 	if(isset($_GET["valider"]))
 	{
-		$bdd->query("DELETE FROM tache where id=".$_GET["valider"]);
+		$bdd->query("UPDATE tache SET avance=100 where id=".$_GET["valider"]);
 		header('Location: http://localhost/Ent.gest');
  		exit();
 	}
