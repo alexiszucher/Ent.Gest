@@ -10,7 +10,8 @@
 
 	if(isset($_GET["valider"]))
 	{
-		$bdd->query("UPDATE tache SET avance=100 where id=".$_GET["valider"]);
+		$date = date("Y-m-d");
+		$bdd->query("UPDATE tache SET avance=100, date='".$date."' where id=".$_GET["valider"]);
 		header('Location: http://localhost/Ent.gest');
  		exit();
 	}
