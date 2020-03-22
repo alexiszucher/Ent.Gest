@@ -60,6 +60,37 @@
     		</div>
   		</div>
 	</div>
-</div>';
+</div>
+
+<H5 align="center"><span align="center" class="purple-text">Productivité de cette période</span></H5>
+
+<?php
+	if(isset($_POST["dateDebut"]) && $_POST["dateDebut"] != "")
+	{
+    	$requete = 'SELECT * FROM tache where date BETWEEN "'.$_POST["dateDebut"].'" AND "'.$_POST["dateFin"].'" AND avance=100 Order by date asc';
+    	$result = $bdd->query($requete);
+
+    	echo "<table class='striped'>
+		        <thead>
+		          <tr>
+		              <th>Tâche</th>
+		              <th>Durée</th>
+		              <th>Date</th>
+		          </tr>
+		        </thead>
+		        <tbody>";
+
+    	foreach ($result as $tache)
+    	{
+    		echo "<tr>
+            <td>".$tache["libelle"]."</td>
+            <td>".$tache["minute"]."</td>
+            <td>".$tache["date"]."</td>";
+    	}
+
+    	echo "</tbody>
+		</table>";
+	}
+?>
 
 <?php include_once("footer.php"); ?>
